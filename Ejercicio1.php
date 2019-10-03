@@ -18,9 +18,7 @@
         $secondList = ['spaghetti', 'tomate', 'queso'];
         $thirdList = ['lechuga', 'zanahoria', 'atun', 'aguacate'];
         $list = [$firstList, $secondList, $thirdList];
-        $fourthList = ['Tortilla' => $firstList, 'Ensalada' => $thirdList];
         $selectList = randomList($list);
-        $selectListWithName = randomList($fourthList);
     ?>
     <ul>
         <?php foreach($selectList as $item): ?>
