@@ -20,19 +20,21 @@
             </tr>
         </thead>
         <tbody>
-            <? foreach($list as $item): ?>
-                <tr>
-                    <td rowspan="4"><?php echo $item["Nombre"]?></td>
-                    <td>Clave</td>
-                    <td>Valor</td>
-                    <? foreach($item as $key => $data): ?>
-                        <tr>
-                            <td><?php echo $key ?></td>
-                            <td><?php echo $data ?></td>
-                        </tr>
-                    <? endforeach ?>
-                </tr>
-            <? endforeach ?>
+            <?php
+                foreach($list as $item){
+                    echo '<tr>';
+                    echo '<td rowspan="4">'.$item['Nombre'].'</td>';
+                    echo '<td>Clave</td>';
+                    echo '<td>Valor</td>';
+                    foreach($item as $key => $data){
+                        echo '<tr>';
+                        echo '<td>'.$key.'</td>';
+                        echo '<td>'.$data.'</td>';
+                        echo '</tr>';
+                    }
+                    echo '</tr>';
+                }
+            ?>
         </tbody>
     </table>
 </body>
